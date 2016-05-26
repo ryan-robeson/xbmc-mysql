@@ -1,0 +1,11 @@
+version: '2'
+services:
+  kodimariadb:
+    build:
+      context: .
+    environment:
+      MYSQL_ROOT_PASSWORD: "some_crazy-passwordTHATIthoughtUp!"
+    volumes:
+      - ./data:/var/lib/mysql
+    ports:
+      - "3306:3306"

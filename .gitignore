@@ -1,3 +1,5 @@
 .vagrant
 *.swo
 *.swp
+*kodi-db.sql*
+
