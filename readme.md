@@ -41,4 +41,6 @@ This Dockerfile assumes you have an existing Kodi database dump (`./kodi-db.sql.
 If you're starting from scratch, it may throw an error when it can't find the file (I haven't tried it yet). 
 If it does, you should be able to `touch ./kodi-db.sql.gz` to suppress the error.
 
-`docker-compose` is configured to mount `./data` to `/var/lib/mysql` in order to persist the database and make it easily accessible. It also automatically configures the container to listen on port 3306. These can be changed in `./docker-compose.yml`.
+`docker-compose` is configured to mount `/srv/docker/kodimariadb/data` to `/var/lib/mysql` in order to persist the database and make it easily accessible.
+It also automatically configures the container to listen on port 3306.
+These can be changed in `./docker-compose.yml`.
